@@ -60,6 +60,27 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Quran Dev"
+            versionNameSuffix "-dev"
+            applicationIdSuffix ".dev"
+            versionCode 1
+            versionName "1.0.0"
+            applicationId "com.aldev.quran_app"
+        }
+        prod {
+            dimension "app"
+            resValue "string", "app_name", "Quran"
+            versionCode 1
+            versionName "1.0.0"
+            applicationId "com.aldev.quran_app"
+        }
+    }
 }
 
 flutter {
